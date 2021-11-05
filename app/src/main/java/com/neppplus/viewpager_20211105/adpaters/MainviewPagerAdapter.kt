@@ -21,4 +21,18 @@ class MainviewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
             else -> IntroduceFragment()
         }
     }
+
+//    추가 작업. 각 페이지의 제목이 뭔지? => 탭레이아웃의 제목으로 활용.
+
+    override fun getPageTitle(position: Int): CharSequence? {
+
+    return when(position) {
+
+        0 -> "인사"
+        1 -> "이름"
+        else -> "자기소개"
+    }
+
+    }
+
 }
